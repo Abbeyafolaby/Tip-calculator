@@ -250,6 +250,11 @@ input {
     .reset {
         padding: 1rem;
     }
+    
+    .people-img,
+    .dollar-img {
+        top: 2.6rem;
+    }
 }
 
 @media screen and (max-width: 320px) {
