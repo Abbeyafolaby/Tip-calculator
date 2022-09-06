@@ -1,0 +1,265 @@
+/* VARIABLES CSS */
+
+:root {
+    /* COLORS */
+
+    --strongcyan: hsl(172, 67%, 45%);
+    --verydarkcyan: hsl(183, 100%, 15%);
+    --darkgrayishcyan: hsl(186, 14%, 43%);
+    --grayishcyan: hsl(184, 14%, 56%);
+    --lightgrayishcyan: hsl(185, 41%, 84%);
+    --verylightgrayishcyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+    --error: hsl(0, 86%, 46%);
+
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--lightgrayishcyan);
+    font-family: 'Space Mono', monospace;
+    margin: 50px auto;
+}
+
+.grid {
+    display: grid;
+}
+
+h4 {
+    color: var(--verylightgrayishcyan);
+    font-weight: 100;
+    font-size: .9rem;
+}
+
+span {
+    font-size: .6rem;
+    font-weight: 100;
+    color: var(--lightgrayishcyan);
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    color: var(--verydarkcyan);
+}
+
+
+.container {
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    max-width: 800px;
+    height: 350px;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    padding: 2rem;
+    margin: 40px auto 0;
+}
+
+.title {
+    font-size: .9rem;
+    margin-bottom: .5rem;
+    color: var(--darkgrayishcyan);
+}
+
+.logo-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item1 {
+    row-gap: 1rem;
+}
+
+.input-bill {
+    height: 2.5rem;
+    width: 100%;
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    border-radius: .3rem;
+    background-color: var(--verylightgrayishcyan);
+}
+
+.box1,
+.box3 {
+    position: relative;
+}
+
+.box {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.tip-input,
+.tip-button {
+    width: 7rem;
+    height: 2.7rem;
+    outline: none;
+    border: none;
+    border-radius: .2rem;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.tip-button {
+    background-color: var(--verydarkcyan);
+    color: var(--white);
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    transition: all 1000ms ease-in-out;
+}
+
+.unselected:hover {
+    background-color: var(--lightgrayishcyan);
+    color: var(--verydarkcyan);
+}
+
+.selected {
+    color: var(--verydarkcyan);
+    background-color: var(--strongcyan);
+}
+
+.tip-input {
+    background-color: var(--verylightgrayishcyan);
+    text-align: center;
+    
+}
+
+
+.dollar-img,
+.people-img {
+    position: absolute;
+    left: .5rem;
+    top: 2rem;
+}
+
+.item2 {
+    background-color: var(--verydarkcyan);
+    padding: 2rem;
+    border-radius: 1rem;
+    row-gap: 1rem;
+}
+
+.total-amount,
+.tip-amount {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.tipPerPerson,
+.totalPerPerson {
+    font-size: 1.8rem;
+    color: var(--strongcyan);
+}
+
+
+
+.reset {
+    width: 100%;
+    background-color: var(--strongcyan);
+    color: var(--verydarkcyan);
+    border: none;
+    font-weight: 700;
+    font-size: .9rem;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    transition: all 1000ms ease-in-out;
+}
+
+.hidden {
+    color: var(--error);
+    font-size: .7rem;
+    margin-left: 7.2rem;
+    visibility: hidden;
+}
+
+.hidden-input {
+    outline: 1px solid var(--error);
+    background-color: hsla(0, 100%, 50%, 0.2);
+    color: var(--error);
+}
+
+.reset:hover {
+    background-color: var(--lightgrayishcyan);
+    color: var(--verydarkcyan);
+    
+}
+
+.input-bill:hover,
+.tip-input:hover {
+    border: 1px solid var(--strongcyan);
+    cursor: pointer;
+   
+}
+
+.attribution { 
+    font-size: 1rem; 
+    text-align: center; 
+    margin-top: 3rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 450px) {
+    .container  {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .box {
+        grid-template-columns:  repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .hidden {
+        margin-left: 5rem;
+    }
+
+    .tip-input,
+    .tip-button {
+        width: 9rem;
+        height: 3rem;
+    }
+
+    .attribution {
+        margin-top: .1rem;
+    }
+
+    .reset {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .tip-input,
+    .tip-button {
+        width: 7rem;
+        height: 3rem;
+    }
+
+    .hidden {
+        margin-left: 1rem;
+    }
+}
