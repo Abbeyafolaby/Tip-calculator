@@ -1,1 +1,1 @@
-# Tip-calculator
+# Frontend Mentor - Tip calculator app
