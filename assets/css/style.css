@@ -185,7 +185,7 @@ input {
 .hidden {
     color: var(--error);
     font-size: .7rem;
-    margin-left: 7.2rem;
+    margin-left: 6.8rem;
     display: none;
 }
 
