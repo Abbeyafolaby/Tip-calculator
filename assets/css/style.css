@@ -186,7 +186,7 @@ input {
     color: var(--error);
     font-size: .7rem;
     margin-left: 7.2rem;
-    visibility: hidden;
+    display: none;
 }
 
 .hidden-input {
@@ -266,5 +266,6 @@ input {
 
     .hidden {
         margin-left: 1rem;
+        font-size: .6rem;
     }
 }
