@@ -234,7 +234,7 @@ input {
     }
 
     .hidden {
-        margin-left: 5rem;
+        margin-left: 6.5rem;
     }
 
     .tip-input,
@@ -256,6 +256,13 @@ input {
         top: 2.6rem;
     }
 }
+
+@media screen and (max-width:375px) {
+    .hidden {
+        margin-left: 4rem;
+    }
+}
+
 
 @media screen and (max-width: 320px) {
     .tip-input,
