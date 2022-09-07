@@ -51,10 +51,10 @@ NumberOfPeople.addEventListener("input", ()=>{
     ppl = NumberOfPeople.value;
     if(ppl <= 0 && ppl != ""){
         NumberOfPeople.classList.add("hidden-input");
-        hidden.style.visibility = "visible";
+        hidden.style.display = "inline";
     }else{
         NumberOfPeople.classList.remove("hidden-input");
-        hidden.style.visibility = "hidden";
+        hidden.style.display = "none";
         calc();        
     }
 });
